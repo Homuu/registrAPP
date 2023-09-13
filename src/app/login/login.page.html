@@ -1,11 +1,9 @@
 <ion-content [fullscreen]="true">
-
   <div class="ion-text-center">
     <h1>Login</h1>
   </div>
 
   <ion-card>
-
     <ion-item>
       <ion-label position="stacked">Usuario</ion-label>
       <ion-input placeholder="Ingresar usuario"></ion-input>
@@ -13,26 +11,19 @@
 
     <ion-item>
       <ion-label position="stacked">Contraseña</ion-label>
-      <ion-input placeholder="Ingresar contraseña" type="password" ></ion-input>
+      <ion-input placeholder="Ingresar contraseña" type="password"></ion-input>
     </ion-item>
-
-
-
   </ion-card>
 
   <ion-button expand="full">Ingresar</ion-button>
- 
 
   <div class="ion-text-center">
-<<<<<<< HEAD
-    <ion-text color="primary">Registrate</ion-text>
-=======
     <ion-text color="primary" [routerLink]="['/registro']">Registrate</ion-text>
->>>>>>> 0a66dc504a40360935a178c26792213aa64c0109
   </div>
 
   <div class="ion-text-center">
-    <ion-text color="primary" [routerLink]="['/recuperar']" >¿Olvidaste tu contraseña?</ion-text>
+    <ion-text color="primary" [routerLink]="['/recuperar']"
+      >¿Olvidaste tu contraseña?</ion-text
+    >
   </div>
-
 </ion-content>
