@@ -4,17 +4,20 @@
   </div>
 
   <ion-card>
-
     <ion-item>
       <ion-label position="stacked">Nombre</ion-label>
       <ion-input placeholder="Ingresar Nombre"></ion-input>
     </ion-item>
 
-    <ion-item>
-      <ion-label position="stacked">Carrera</ion-label>
-      <ion-input placeholder="Ingresar carrera"></ion-input>
-    </ion-item>
-
+    <ion-list>
+      <ion-item>
+        <ion-select label="Carrera" placeholder="Carrera">
+          <ion-select-option value="apple"
+            >Ingenieria en informatica</ion-select-option
+          >
+        </ion-select>
+      </ion-item>
+    </ion-list>
     <ion-item>
       <ion-label position="stacked">Rut</ion-label>
       <ion-input placeholder="Ingresar rut" inputmode="numeric"></ion-input>
@@ -27,11 +30,12 @@
 
     <ion-item>
       <ion-label position="stacked">Confirmar Contraseña</ion-label>
-      <ion-input placeholder="Confirme la contraseña" type="password"></ion-input>
+      <ion-input
+        placeholder="Confirme la contraseña"
+        type="password"
+      ></ion-input>
     </ion-item>
-
   </ion-card>
 
-  <ion-button expand="full">Registrarse</ion-button>
-
+  <ion-button expand="full" (click)="guardar()">Registrarse</ion-button>
 </ion-content>
