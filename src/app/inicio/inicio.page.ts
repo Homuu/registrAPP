@@ -34,8 +34,8 @@ export class InicioPage implements OnInit {
 
   async presentAlert(): Promise<void> {
     const alert = await this.alertController.create({
-      header: 'Permission denied',
-      message: 'Please grant camera permission to use the barcode scanner.',
+      header: 'No se pyede acceder',
+      message: 'Otorga acceso a la camara para continuar',
       buttons: ['OK'],
     });
     await alert.present();
