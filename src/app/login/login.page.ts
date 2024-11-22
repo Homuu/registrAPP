@@ -1,34 +1,47 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
 import { Router } from '@angular/router';
-import {FormGroup,
-  FormControl,
-  Validators,
-  FormBuilder} from '@angular/forms';
-import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
-export class LoginPage implements OnInit {
+export class LoginPage {
+  username: string = '';
+  password: string = '';
+  showPassword: boolean = false;
+
+  users = [
+    { username: 'admin', password: '1234' },
+    { username: 'homu', password: 'homu015' },
+    { username: 'martin', password: 'martin123' },
+   
+  ];
+
+  constructor(private navCtrl: NavController, private router: Router) {}
   
-  formularioLogin: FormGroup;
 
-  constructor(public fb: FormBuilder,
-    public alertController: AlertController) { 
-    this.formularioLogin = this.fb.group({
-      'nombre': new FormControl("",Validators.required),
-      'contraseña': new FormControl("",Validators.required)
-    })
-
+  togglePasswordVisibility() {
+    this.showPassword = !this.showPassword;
   }
-  
-  
 
-  ngOnInit() {
+  login() {
+    console.log('Ingresado:', this.username, this.password);
+  
+    const user = this.users.find(
+      (u) => u.username === this.username && u.password === this.password
+    );
+  
+    if (user) {
+      console.log('Usuario encontrado:', user);
+      sessionStorage.setItem('username', this.username);
+      sessionStorage.setItem('password', this.password);
+  
+      // Redirige a la página de inicio
+      this.router.navigate(['/inicio']);
+    } else {
+      alert('Usuario o contraseña incorrectos');
+    }
   }
-
-  
-
 }

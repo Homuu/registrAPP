@@ -6,16 +6,16 @@
   <ion-card>
     <ion-item>
       <ion-label position="stacked">Usuario</ion-label>
-      <ion-input placeholder="Ingresar usuario"></ion-input>
+      <ion-input placeholder="Ingresar usuario" [(ngModel)]="username"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position="stacked">Contraseña</ion-label>
-      <ion-input placeholder="Ingresar contraseña" type="password"></ion-input>
+      <ion-input placeholder="Ingresar contraseña" type="password" [(ngModel)]="password"></ion-input>
     </ion-item>
   </ion-card>
 
-  <ion-button expand="full" color="primary" [routerLink]="['/scanner']">Iniciar Sesion</ion-button>
+  <ion-button expand="full" color="primary" (click)="login()">Iniciar Sesion</ion-button>
 
   <div class="ion-text-center">
     <ion-text color="primary" [routerLink]="['/registro']">Registrate</ion-text>
