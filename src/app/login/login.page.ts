@@ -39,7 +39,7 @@ export class LoginPage {
       sessionStorage.setItem('password', this.password);
   
       // Redirige a la página de inicio
-      this.router.navigate(['/inicio']);
+      this.router.navigate(['/inicioalumno']);
     } else {
       alert('Usuario o contraseña incorrectos');
     }

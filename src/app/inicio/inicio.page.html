@@ -1,5 +1,10 @@
-
-<ion-card>
-    <ion-button expand="expand" color="primary" [routerLink]="['/qr']">Crear Qr</ion-button>
-    <ion-button expand="expand" color="primary" [routerLink]="['/scanner']">Escanear Qr</ion-button>
+<ion-content [fullscreen]="true">
+  <div class="ion-text-center">
+    <h1>¿Eres un alumno o un profesor?
+    </h1>
+  </div>
+  <ion-card>
+    <ion-button expand="expand" color="primary" [routerLink]="['/login']">Alumno</ion-button>
+    <ion-button expand="expand" color="primary" [routerLink]="['/loginprofe']">Profesor</ion-button>
   </ion-card>
+</ion-content>
