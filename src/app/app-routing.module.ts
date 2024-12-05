@@ -31,6 +31,14 @@ const routes: Routes = [
     path: 'qr',
     loadChildren: () => import('./qr/qr.module').then( m => m.QrPageModule)
   },
+  {
+    path: 'inicioprofe',
+    loadChildren: () => import('./inicioprofe/inicioprofe.module').then( m => m.InicioprofePageModule)
+  },
+  {
+    path: 'loginprofe',
+    loadChildren: () => import('./loginprofe/loginprofe.module').then( m => m.LoginprofePageModule)
+  },
 ];
 
 @NgModule({
