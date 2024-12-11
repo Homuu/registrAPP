@@ -14,7 +14,7 @@ export class LoginPage {
 
   users = [
     { username: 'admin', password: '1234' },
-    { username: 'homu', password: 'homu015' },
+    { username: 'homu', password: 'homu123' },
     { username: 'martin', password: 'martin123' },
    
   ];
@@ -39,7 +39,7 @@ export class LoginPage {
       sessionStorage.setItem('password', this.password);
   
       // Redirige a la página de inicio
-      this.router.navigate(['/inicioalumno']);
+      this.router.navigate(['/scanner']);
     } else {
       alert('Usuario o contraseña incorrectos');
     }

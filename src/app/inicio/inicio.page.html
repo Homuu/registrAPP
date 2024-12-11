@@ -1,10 +1,12 @@
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" class="ion-padding">
+  <!-- Título centrado -->
   <div class="ion-text-center">
-    <h1>¿Eres un alumno o un profesor?
-    </h1>
+    <h1>¿Eres un alumno o un profesor?</h1>
   </div>
-  <ion-card>
-    <ion-button expand="expand" color="primary" [routerLink]="['/login']">Alumno</ion-button>
-    <ion-button expand="expand" color="primary" [routerLink]="['/loginprofe']">Profesor</ion-button>
+
+  <!-- Card centrada con botones -->
+  <ion-card class="login-card">
+    <ion-button expand="block" color="primary" [routerLink]="['/login']">Alumno</ion-button>
+    <ion-button expand="block" color="primary" [routerLink]="['/loginprofe']">Profesor</ion-button>
   </ion-card>
 </ion-content>
