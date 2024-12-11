@@ -25,13 +25,16 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-content>
-    <div class="center-content">
-      <ion-text color="primary">
-        <h1>Generar QR</h1>
-      </ion-text>
-      <input type="text" [(ngModel)]="texto">
-      <br><br>
+  <ion-content class="content-center">
+    <ion-text color="primary">
+      <h1>Generar QR</h1>
+    </ion-text>
+
+    <!-- Botón para generar el QR con la fecha -->
+    <ion-button (click)="generateQRCode()" expand="full" class="ion-margin-top">Generar QR </ion-button>
+
+    <!-- Contenedor del QR generado -->
+    <div class="qr-container">
       <qrcode [qrdata]="texto" [width]="400"></qrcode>
     </div>
   </ion-content>

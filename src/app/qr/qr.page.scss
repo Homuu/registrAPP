@@ -1,18 +1,24 @@
-.center-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    text-align: center;
-  }
-  
-  .center-content input {
-    margin: 10px 0;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 80%;
-    max-width: 400px;
-  }
-  
+ion-content.content-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* Centra los elementos verticalmente */
+  align-items: center;      /* Centra los elementos horizontalmente */
+  height: 100vh;            /* Asegura que ocupe toda la altura de la pantalla */
+}
+
+ion-text {
+  text-align: center;  /* Centra el texto */
+  margin-bottom: 20px; /* Espacio entre el título y el botón */
+}
+
+ion-button {
+  max-width: 80%;  /* Limita el tamaño del botón */
+  margin-bottom: 20px; /* Espacio entre el botón y el QR */
+}
+
+.qr-container {
+  display: flex;
+  justify-content: center;  /* Centra el QR horizontalmente */
+  align-items: center;      /* Centra el QR verticalmente */
+  width: 100%;
+}

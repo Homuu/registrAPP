@@ -1,13 +1,66 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>lista</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-menu side="end" contentId="main-content">
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">lista</ion-title>
+      <ion-title>Lista</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item button [routerLink]="['/inicioprofe']">Inicio</ion-item>
+      <ion-item button [routerLink]="['/qr']">Crear Qr</ion-item>
+      <ion-item button [routerLink]="['/lista']">Ver Lista</ion-item>
+      <ion-item button [routerLink]="['/loginprofe']">Cerrar sesión</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Ver Lista</ion-title>
+      <ion-buttons slot="end">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  
+  
+  <ion-content class="content-center">
+    <ion-list>
+      <!-- Lenguaje -->
+      <ion-item>
+        <ion-label>
+          <h2>Lenguaje</h2>
+          <p>Sigla: LEN</p>
+          <p>Sala: 1</p>
+        </ion-label>
+        <ion-button (click)="generateQRCode('Lenguaje', 'ABC', 1)">Generar QR</ion-button>
+      </ion-item>
+      
+      <!-- Matemáticas -->
+      <ion-item>
+        <ion-label>
+          <h2>Matemáticas</h2>
+          <p>Sigla: MAT</p>
+          <p>Sala: 2</p>
+        </ion-label>
+        <ion-button (click)="generateQRCode('Matemáticas', 'MAT', 2)">Generar QR</ion-button>
+      </ion-item>
+  
+      <!-- Historia -->
+      <ion-item>
+        <ion-label>
+          <h2>Movil</h2>
+          <p>Sigla: MOV</p>
+          <p>Sala: 3</p>
+        </ion-label>
+        <ion-button (click)="generateQRCode('Historia', 'HIS', 3)">Generar QR</ion-button>
+      </ion-item>
+    </ion-list>
+  
+   <!-- Mostramos el QR generado -->
+  <div class="qr-container" *ngIf="textoQR">
+    <qrcode [qrdata]="textoQR"></qrcode> 
+  </div>
 </ion-content>
