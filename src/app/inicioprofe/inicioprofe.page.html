@@ -1,3 +1,35 @@
-<ion-card>
-  <ion-button expand="expand" color="primary" [routerLink]="['/qr']">Crear Qr</ion-button>
-</ion-card>
+<ion-menu side="end" contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Contenido Profesor</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item button [routerLink]="['/inicioprofe']">Inicio</ion-item>
+      <ion-item button [routerLink]="['/qr']">Crear Qr</ion-item>
+      <ion-item button [routerLink]="['/lista']">Ver Lista</ion-item>
+      <ion-item button [routerLink]="['/loginprofe']">Cerrar sesión</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Inicio Profesor</ion-title>
+      <ion-buttons slot="end">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <div class="center-content">
+      <h1>{{ greeting }} Profesor</h1>
+      <p>La fecha actual es {{ currentDate }}</p>
+      <!-- Calendario -->
+      <ion-datetime></ion-datetime>
+    </div>
+  </ion-content>
+</div>

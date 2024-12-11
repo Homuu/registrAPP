@@ -1,17 +1,38 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-      <ion-title>
-          Generar QR
-      </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-menu side="end" contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Crear QR</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item button [routerLink]="['/inicioprofe']">Inicio</ion-item>
+      <ion-item button [routerLink]="['/qr']">Crear Qr</ion-item>
+      <ion-item button [routerLink]="['/lista']">Ver Lista</ion-item>
+      <ion-item button [routerLink]="['/loginprofe']">Cerrar sesión</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
 
-<!-- Para que funcione se debe instalar npm install angularx-qrcode -->
-<ion-content >
-  <ion-text color="primary">
-      <h1>Generar QR</h1>
-  </ion-text>
-  <input type="text" [(ngModel)]="texto">
-  <br><br>
-  <qrcode [qrdata]="texto" [width]= "400"></qrcode>
-</ion-content>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="end">
+        <!-- Botón para abrir el menú -->
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Generar QR</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <div class="center-content">
+      <ion-text color="primary">
+        <h1>Generar QR</h1>
+      </ion-text>
+      <input type="text" [(ngModel)]="texto">
+      <br><br>
+      <qrcode [qrdata]="texto" [width]="400"></qrcode>
+    </div>
+  </ion-content>
+</div>

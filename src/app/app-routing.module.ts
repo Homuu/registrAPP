@@ -43,6 +43,10 @@ const routes: Routes = [
     path: 'inicioalumno',
     loadChildren: () => import('./inicioalumno/inicioalumno.module').then( m => m.InicioalumnoPageModule)
   },
+  {
+    path: 'lista',
+    loadChildren: () => import('./lista/lista.module').then( m => m.ListaPageModule)
+  },
 ];
 
 @NgModule({
